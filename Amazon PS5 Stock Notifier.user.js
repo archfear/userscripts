@@ -6,32 +6,33 @@
 // @author       archfear
 // @match        https://*.amazon.com/PlayStation-5-Console/dp/B08FC5L3RG*
 // @grant        GM_notification
+// @noframes
 // ==/UserScript==
 
 // LEAVE THE BROWSER ON THIS PAGE: https://smile.amazon.com/PlayStation-5-Console/dp/B08FC5L3RG
 
-var player = document.createElement('audio');
-player.src = 'https://archfear-static.s3-us-west-2.amazonaws.com/railroad_crossing_bell.mp3';
-player.preload = 'auto';
+function notify(
+    title,
+    text = 'PS5 In Stock',
+    audioSrc = 'https://archfear-static.s3-us-west-2.amazonaws.com/railroad_crossing_bell.mp3') {
 
-function notifyMe() {
-    document.title = "IN STOCK - " + document.title;
     GM_notification({
-        title: 'PS5 In Stock On Amazon',
-        text: 'PS5 In Stock On Amazon',
+        title,
+        text,
         silent: false,
         onclick: function() {
             window.focus();
         },
         timeout: 0
     });
-    player.play();
+    const audio = new Audio(audioSrc);
+    audio.play();
 }
 
 var refreshDelay = 120; // seconds
 
 if (document.body.innerHTML.includes('$499.99')) {
-  notifyMe();
+  notify('Amazon');
 } else {
   setTimeout(function(){ location.reload(); }, refreshDelay*1000);
 }

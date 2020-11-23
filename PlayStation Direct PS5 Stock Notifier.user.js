@@ -5,33 +5,37 @@
 // @description  Plays a sound and desktop notification when the PS5 is in stock on Playstation Direct
 // @author       archfear
 // @match        https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816*
+// @match        https://direct-queue.playstation.com*
 // @grant        GM_notification
+// @noframes
 // ==/UserScript==
 
 // LEAVE THE BROWSER ON THIS PAGE: https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816
 
-var player = document.createElement('audio');
-player.src = 'https://archfear-static.s3-us-west-2.amazonaws.com/railroad_crossing_bell.mp3';
-player.preload = 'auto';
+function notify(
+    title,
+    text = 'PS5 In Stock',
+    audioSrc = 'https://archfear-static.s3-us-west-2.amazonaws.com/railroad_crossing_bell.mp3') {
 
-function notifyMe() {
-    document.title = "IN STOCK - " + document.title;
     GM_notification({
-        title: 'PS5 In Stock On PlayStation Direct',
-        text: 'PS5 In Stock On PlayStation Direct',
+        title,
+        text,
         silent: false,
         onclick: function() {
             window.focus();
         },
         timeout: 0
     });
-    player.play();
+    const audio = new Audio(audioSrc);
+    audio.play();
 }
 
 var refreshDelay = 120; // seconds
 
-if (!/Out of Stock/i.test(document.body.innerHTML)) {
-  notifyMe();
+if (window.location.href.includes('https://direct-queue.playstation.com')) {
+  notify('PlayStation Direct', 'You are in the queue');
+} if (!/Out of Stock/i.test(document.body.innerHTML)) {
+  notify('PlayStation Direct');
 } else {
   setTimeout(function(){ location.reload(); }, refreshDelay*1000);
 }

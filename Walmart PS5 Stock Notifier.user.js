@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name         B&H PS5 Stock Notifier
+// @name         Walmart PS5 Stock Notifier
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Plays a sound and desktop notification when the PS5 is in stock on B&H
+// @description  Plays a sound and desktop notification when the PS5 is in stock at Walmart
 // @author       archfear
-// @match        https://www.bhphotovideo.com/c/product/1595083-REG/sony_3005718_playstation_5_gaming_console.html*
+// @match        https://www.walmart.com/ip/PlayStation-5-Console/363472942*
 // @grant        GM_notification
 // @noframes
 // ==/UserScript==
 
-// LEAVE THE BROWSER ON THIS PAGE: https://www.bhphotovideo.com/c/product/1595083-REG/sony_3005718_playstation_5_gaming_console.html
+// LEAVE THE BROWSER ON THIS PAGE: https://www.walmart.com/ip/PlayStation-5-Console/363472942
 
 function notify(
     title,
@@ -31,8 +31,8 @@ function notify(
 
 var refreshDelay = 120; // seconds
 
-if (!/Notify when available/i.test(document.body.innerHTML)) {
-  notify('B&H');
+if (document.body.innerHTML.includes('Add to cart')) {
+  notify('Walmart');
 } else {
   setTimeout(function(){ location.reload(); }, refreshDelay*1000);
 }

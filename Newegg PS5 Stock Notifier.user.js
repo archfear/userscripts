@@ -5,33 +5,35 @@
 // @description  Plays a sound and desktop notification when the PS5 is in stock on Newegg
 // @author       archfear
 // @match        https://www.newegg.com/p/N82E16868110292*
+// @run-at       document-end
 // @grant        GM_notification
+// @noframes
 // ==/UserScript==
 
 // LEAVE THE BROWSER ON THIS PAGE: https://www.newegg.com/p/N82E16868110292
 
-var player = document.createElement('audio');
-player.src = 'https://archfear-static.s3-us-west-2.amazonaws.com/railroad_crossing_bell.mp3';
-player.preload = 'auto';
+function notify(
+    title,
+    text = 'PS5 In Stock',
+    audioSrc = 'https://archfear-static.s3-us-west-2.amazonaws.com/railroad_crossing_bell.mp3') {
 
-function notifyMe() {
-    document.title = "IN STOCK - " + document.title;
     GM_notification({
-        title: 'PS5 In Stock On Newegg',
-        text: 'PS5 In Stock On Newegg',
+        title,
+        text,
         silent: false,
         onclick: function() {
             window.focus();
         },
         timeout: 0
     });
-    player.play();
+    const audio = new Audio(audioSrc);
+    audio.play();
 }
 
 var refreshDelay = 120; // seconds
 
-if (!/Sold out/i.test(document.body.innerHTML)) {
-  notifyMe();
+if (!document.body.innerHTML.includes('CURRENTLY SOLD OUT')) {
+    notify('Newegg');
 } else {
-  setTimeout(function(){ location.reload(); }, refreshDelay*1000);
+    setTimeout(function(){ location.reload(); }, refreshDelay*1000);
 }

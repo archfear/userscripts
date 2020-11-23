@@ -6,32 +6,35 @@
 // @author       archfear
 // @match        https://www.adorama.com/so3005718.html*
 // @grant        GM_notification
+// @noframes
 // ==/UserScript==
 
 // LEAVE THE BROWSER ON THIS PAGE: https://www.adorama.com/so3005718.html
 
-var player = document.createElement('audio');
-player.src = 'https://archfear-static.s3-us-west-2.amazonaws.com/railroad_crossing_bell.mp3';
-player.preload = 'auto';
+function notify(
+    title,
+    text = 'PS5 In Stock',
+    audioSrc = 'https://archfear-static.s3-us-west-2.amazonaws.com/railroad_crossing_bell.mp3') {
 
-function notifyMe() {
-    document.title = "IN STOCK - " + document.title;
     GM_notification({
-        title: 'PS5 In Stock On Adorama',
-        text: 'PS5 In Stock On Adorama',
+        title,
+        text,
         silent: false,
         onclick: function() {
             window.focus();
         },
         timeout: 0
     });
-    player.play();
+    const audio = new Audio(audioSrc);
+    audio.play();
 }
 
 var refreshDelay = 120; // seconds
 
-if (!/Temporarily not available/i.test(document.body.innerHTML)) {
-  notifyMe();
+if (/Please verify you are a human/i.test(document.body.innerHTML)) {
+    notify('Adorama', "Verify that you're human", 'https://archfear-static.s3-us-west-2.amazonaws.com/door_bell.mp3');
+} else if (/Temporarily not available/i.test(document.body.innerHTML)) {
+    setTimeout(function(){ location.reload(); }, refreshDelay*1000);
 } else {
-  setTimeout(function(){ location.reload(); }, refreshDelay*1000);
+    notify('Adorama');
 }
