@@ -35,6 +35,8 @@ if (/Please verify you are a human/i.test(document.body.innerHTML)) {
     notify('Adorama', "Verify that you're human", 'https://archfear-static.s3-us-west-2.amazonaws.com/door_bell.mp3');
 } else if (/Temporarily not available/i.test(document.body.innerHTML)) {
     setTimeout(function(){ location.reload(); }, refreshDelay*1000);
+} else if (document.body.includes('Error Occured, try again soon.')) {
+    setTimeout(function(){ location.reload(); }, 30*1000);
 } else {
     notify('Adorama');
 }

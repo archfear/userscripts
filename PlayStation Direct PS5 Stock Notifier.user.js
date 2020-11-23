@@ -34,7 +34,9 @@ var refreshDelay = 120; // seconds
 
 if (window.location.href.includes('https://direct-queue.playstation.com')) {
   notify('PlayStation Direct', 'You are in the queue');
-} if (!/Out of Stock/i.test(document.body.innerHTML)) {
+} else if (document.body.innerHTML.includes('Session has expired due to inactivity.')) {
+  notify('PlayStation Direct', 'Session has expired due to inactivity.', 'https://archfear-static.s3-us-west-2.amazonaws.com/door_bell.mp3');
+} else if (!/Out of Stock/i.test(document.body.innerHTML)) {
   notify('PlayStation Direct');
 } else {
   setTimeout(function(){ location.reload(); }, refreshDelay*1000);
