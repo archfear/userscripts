@@ -33,7 +33,7 @@ In addition to this script, I'd recommend keeping an eye on these Twitter accoun
 * [PlayStation Direct](https://direct.playstation.com/en-us/ps5)
 * [Target](https://www.target.com/p/playstation-5-console/-/A-81114595)
 * [Walmart](https://www.walmart.com/ip/PlayStation-5-Console/363472942)
-2. For each store, create an account, log in, and set a default payment method.
+4. For each store, create an account, log in, and set a default payment method.
 
 ### Customization
 * To change the time between page reloads, edit the `refreshDelay` variable in each script. Lower numbers can really slow down your machine. I lower the number for a specific site only if I'm expecting stock to appear soon.
