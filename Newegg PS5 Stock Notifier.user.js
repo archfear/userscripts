@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Newegg PS5 Stock Notifier
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Plays a sound and desktop notification when the PS5 is in stock on Newegg
 // @author       archfear
 // @match        https://www.newegg.com/p/N82E16868110292*
+// @updateURL    https://github.com/archfear/userscripts/raw/main/Newegg%20PS5%20Stock%20Notifier.user.js
+// @downloadURL  https://github.com/archfear/userscripts/raw/main/Newegg%20PS5%20Stock%20Notifier.user.js
 // @run-at       document-end
 // @grant        GM_notification
 // @noframes

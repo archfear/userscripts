@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Amazon PS5 Stock Notifier
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Plays a sound and desktop notification when the PS5 is in stock on Amazon
 // @author       archfear
 // @match        https://*.amazon.com/PlayStation-5-Console/dp/B08FC5L3RG*
+// @updateURL    https://github.com/archfear/userscripts/raw/main/Amazon%20PS5%20Stock%20Notifier.user.js
+// @downloadURL  https://github.com/archfear/userscripts/raw/main/Amazon%20PS5%20Stock%20Notifier.user.js
 // @grant        GM_notification
 // @noframes
 // ==/UserScript==

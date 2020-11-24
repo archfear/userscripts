@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Target PS5 Stock Notifier
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Plays a sound and desktop notification when the PS5 is in stock at Target
 // @author       archfear
 // @match        https://www.target.com/p/playstation-5-console/-/A-81114595*
+// @updateURL    https://github.com/archfear/userscripts/raw/main/Target%20PS5%20Stock%20Notifier.user.js
+// @downloadURL  https://github.com/archfear/userscripts/raw/main/Target%20PS5%20Stock%20Notifier.user.js
 // @grant        GM_notification
 // @noframes
 // ==/UserScript==

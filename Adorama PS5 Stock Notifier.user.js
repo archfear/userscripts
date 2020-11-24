@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Adorama PS5 Stock Notifier
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Plays a sound and desktop notification when the PS5 is in stock on Adorama
 // @author       archfear
 // @match        https://www.adorama.com/so3005718.html*
+// @updateURL    https://github.com/archfear/userscripts/raw/main/Adorama%20PS5%20Stock%20Notifier.user.js
+// @downloadURL  https://github.com/archfear/userscripts/raw/main/Adorama%20PS5%20Stock%20Notifier.user.js
 // @grant        GM_notification
 // @noframes
 // ==/UserScript==

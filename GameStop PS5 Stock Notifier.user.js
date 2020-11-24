@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         GameStop PS5 Stock Notifier
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Plays a sound and desktop notification when the PS5 is in stock at GameStop
 // @author       archfear
 // @match        https://www.gamestop.com/video-games/playstation-5/consoles/products/playstation-5/11108140.html*
+// @updateURL    https://github.com/archfear/userscripts/raw/main/GameStop%20PS5%20Stock%20Notifier.user.js
+// @downloadURL  https://github.com/archfear/userscripts/raw/main/GameStop%20PS5%20Stock%20Notifier.user.js
 // @grant        GM_notification
 // @noframes
 // ==/UserScript==
