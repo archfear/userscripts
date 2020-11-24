@@ -1,12 +1,40 @@
-These userscripts will monitor various sites for Playstation 5 availability. They should run fine with Tampermonkey, Greasemonkey or Violentmonkey under Firefox, Chrome, or Edge.
+## PlayStation 5 Stock Checkers
 
-They haven't been tested all that well so I make no guarantees about how reliable they'll be.
+These userscripts will monitor various sites for Playstation 5 (disc version) availability. They should run fine with Tampermonkey, Greasemonkey or Violentmonkey under Firefox, Chrome, or Edge. They haven't been tested all that well so I make no guarantees about how reliable they'll be.
 
-For optimal performance, create a new browser profile with only the userscript extension installed. Here's how to do it in [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiple_profiles) and [Chrome](https://support.google.com/chrome/answer/2364824).
+For optimal performance, either use a differnt browser that has no extensions installed or create a new browser profile. Here's how to do it in [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiple_profiles) and [Chrome](https://support.google.com/chrome/answer/2364824).
+
+In addition to this script, I'd recommend keeping an eye on these Twitter accounts:
+* [@linuswilson](https://twitter.com/linuswilson)
+* [@dealvibes](https://twitter.com/dealvibes/)
+* [@wario64](https://twitter.com/wario64)
 
 ### Installation
+1. Install the [Tampermonkey](https://www.tampermonkey.net/index.php), [Violentmonkey](https://violentmonkey.github.io/) or [Greasemonkey](https://www.greasespot.net/) browser extensions.
+2. Click on the links below for each of the stores that you want to run the script for:
+* [Adorama](https://github.com/archfear/userscripts/raw/main/Adorama%20PS5%20Stock%20Notifier.user.js)
+* [Amazon](https://github.com/archfear/userscripts/raw/main/Amazon%20PS5%20Stock%20Notifier.user.js)
+* [B&H](https://github.com/archfear/userscripts/raw/main/B%26H%20PS5%20Stock%20Notifier.user.js)
+* [Best Buy](https://github.com/archfear/userscripts/raw/main/Best%20Buy%20PS5%20Stock%20Notifier.user.js)
+* [GameStop](https://github.com/archfear/userscripts/raw/main/GameStop%20PS5%20Stock%20Notifier.user.js)
+* [Kohl's](https://github.com/archfear/userscripts/raw/main/Kohl's%20PS5%20Stock%20Notifier.user.js)
+* [Newegg](https://github.com/archfear/userscripts/raw/main/Newegg%20PS5%20Stock%20Notifier.user.js)
+* [PlayStation Direct](https://github.com/archfear/userscripts/raw/main/PlayStation%20Direct%20PS5%20Stock%20Notifier.user.js)
+* [Target](https://github.com/archfear/userscripts/raw/main/Target%20PS5%20Stock%20Notifier.user.js)
+* [Walmart](https://github.com/archfear/userscripts/raw/main/Walmart%20PS5%20Stock%20Notifier.user.js)
+3. Open a tab for each of the store's PS 5 pages by clicking the links below. Be sure to leave them open.
+* [Adorama](https://www.adorama.com/so3005718.html)
+* [Amazon](https://smile.amazon.com/PlayStation-5-Console/dp/B08FC5L3RG)
+* [B&H](https://www.bhphotovideo.com/c/product/1595083-REG/sony_3005718_playstation_5_gaming_console.html)
+* [Best Buy](https://www.bestbuy.com/site/sony-playstation-5-console/6426149.p?skuId=6426149)
+* [GameStop](https://www.gamestop.com/video-games/playstation-5/consoles/products/playstation-5/11108140.html)
+* [Kohl's](https://www.kohls.com/catalog/playstation-video-gaming-consoles.jsp?CN=Brand:PlayStation+Product:Video%20Gaming%20Consoles&PPP=48&kls_sbp=32192532708608414760939013836824718856&pfm=browse%20refine)
+* [Newegg](https://www.newegg.com/p/N82E16868110292)
+* [PlayStation Direct](https://direct.playstation.com/en-us/ps5)
+* [Target](https://www.target.com/p/playstation-5-console/-/A-81114595)
+* [Walmart](https://www.walmart.com/ip/PlayStation-5-Console/363472942)
+2. For each store, create an account, log in, and set a default payment method.
 
-1. Install the scripts for your stores of choice.
-2. Log in to each store.
-3. Open the tab with the URL in the comments at the top of each each script. Be sure to leave it open.
-4. To change the time between page reloads, edit the `refreshDelay` variable in each script. Lower numbers can really slow down your machine. I lower the number for a specific site only if I'm expecting stock to appear soon.
+### Customization
+* To change the time between page reloads, edit the `refreshDelay` variable in each script. Lower numbers can really slow down your machine. I lower the number for a specific site only if I'm expecting stock to appear soon.
+* This script only checks the pages for the disc version of the PS 5 for some store. That can be changed simply by updating the URLs in the script.
