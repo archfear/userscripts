@@ -1,6 +1,6 @@
 ## PlayStation 5 Stock Checkers
 
-These userscripts will monitor various sites for Playstation 5 (disc version) availability. They should run fine with Tampermonkey, Greasemonkey or Violentmonkey under Firefox, Chrome, or Edge. They haven't been tested all that well so I make no guarantees about how reliable they'll be.
+These userscripts will monitor various sites for Playstation 5 (disc version) availability. They should run fine under Firefox, Chrome, or Edge. They haven't been tested all that well so I make no guarantees about how reliable they'll be.
 
 For optimal performance, either use a differnt browser that has no extensions installed or create a new browser profile. Here's how to do it in [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiple_profiles) and [Chrome](https://support.google.com/chrome/answer/2364824).
 
