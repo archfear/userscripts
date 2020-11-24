@@ -4,6 +4,10 @@ These userscripts will monitor various sites for Playstation 5 (disc version) av
 
 For optimal performance, either use a differnt browser that has no extensions installed or create a new browser profile. Here's how to do it in [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiple_profiles) and [Chrome](https://support.google.com/chrome/answer/2364824).
 
+If you want a better chance of having the alert sounds play when the browser is in the background, you'll need to enable background autoplay. To do this:
+* For Chrome, start the browser from the terminal with the follow command: `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --autoplay-policy=no-user-gesture-required`
+* For Firefox, follow [these steps](https://support.mozilla.org/en-US/kb/block-autoplay#w_always-allow-or-block-media-autoplay)
+
 In addition to this script, I'd recommend keeping an eye on these Twitter accounts:
 * [@linuswilson](https://twitter.com/linuswilson)
 * [@dealvibes](https://twitter.com/dealvibes/)
@@ -38,3 +42,6 @@ In addition to this script, I'd recommend keeping an eye on these Twitter accoun
 ### Customization
 * To change the time between page reloads, edit the `refreshDelay` variable in each script. Lower numbers can really slow down your machine. I lower the number for a specific site only if I'm expecting stock to appear soon.
 * This script only checks the pages for the disc version of the PS 5 for some store. That can be changed simply by updating the URLs in the script.
+* If you find the sound too annoying, you can change it by updating the mp3 URL in the scripts.
+
+
