@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         PlayStation Direct PS5 Stock Notifier
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Plays a sound and desktop notification when the PS5 is in stock on Playstation Direct
 // @author       archfear
 // @match        https://direct.playstation.com/en-us/consoles/console/playstation5-console.3005816*
+// @match        https://direct.playstation.com/en-us/consoles/console/playstation5-digital-edition-console.3005817*
 // @match        https://direct.playstation.com/en-us/ps5
 // @match        https://direct-queue.playstation.com*
 // @updateURL    https://github.com/archfear/userscripts/raw/main/PlayStation%20Direct%20PS5%20Stock%20Notifier.user.js
